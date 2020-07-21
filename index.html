@@ -11,8 +11,9 @@
     <div class="l-part">
       <input type="text" placeholder="Username" class="input-1" />
       <div class="overlap-text">
-        <input type="password" placeholder="Password" class="input-2" />
+        <input type="password" id="myInput" placeholder="Password" class="input-2" />
         <a href="#">Forgot?</a>
+        <input type="checkbox" onclick="myFunction()" class="input-2">Show Password
       </div>
       <input type="button" value="Log in" class="btn" />
     </div>
@@ -23,6 +24,7 @@
     </div>
   </div>
 </div>
+
 <style type="text/css">
   * {
   margin: 0px;
@@ -128,7 +130,7 @@ body {
 }
 
 input:focus {
-    background-color: yellow;
+    background-color: null;
 }
 
 
@@ -160,6 +162,16 @@ input:focus {
   letter-spacing: 1px;
 }
 </style>
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
 
 </html>
 
